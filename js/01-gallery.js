@@ -56,3 +56,15 @@ function onGalleryContainerClick(evt) {
         }
     }
 }
+function onOpenModal() {
+    window.addEventListener("keydown", onEscPress); 
+    modal.show()
+}
+function onCloseModal() {
+    window.removeEventListener("keydown", onEscPress)
+    modal.close()
+}
+function onEscPress(event) {
+    modal.close()
+    console.log(event)
+    }
